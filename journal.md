@@ -26,3 +26,15 @@ The Controller will check that the user enters a valid command and a valid numbe
 ### Reflection
 
 The most confusing part right now is figuring out how the Controller will communicate with the Model and View without mixing their responsibilities. I'm also unsure about the best way to handle invalid commands. My plan is to keep each class focused on its own job so the program is easier to understand and maintain.
+
+## Phase 1: The Pot (The Model)
+
+### What I Accomplished
+
+In this phase, I created the CoffeePotModel class to manage the coffee pot's volume and capacity. I added methods for brewing and pouring coffee and made sure the program prevents overflowing or pouring more coffee than is available.
+
+I also tested the Model in Main.java to verify that the volume changes correctly and that invalid actions throw exceptions.
+
+### Reflection
+
+I learned that the Model is responsible for managing the application's data and protecting its internal state. It is important for the Model to validate its own data because it prevents invalid operations, even if another part of the program sends incorrect information. This makes the application more reliable and easier to maintain.
