@@ -50,3 +50,18 @@ I also updated Main.java to test the View by allowing users to enter commands an
 ### Reflection
 
 Keeping the input and output logic in a separate View class makes the program easier to organize and maintain. The View only handles what the user sees and types, while the Model handles the coffee pot's data. This separation will make it easier to add the Controller without mixing responsibilities between classes.
+
+## Phase 3: The Command Center (The Controller)
+
+### What I Accomplished
+
+In this phase, I created the CoffeePotController class and connected it to the CoffeePotModel and CoffeePotView classes. I added logic to process commands such as brew, pour, status, and exit. I also added error handling to prevent invalid commands from crashing the program.
+
+### Reflection: Life of a Command
+
+When the user types a command and presses Enter, the View reads the input using Scanner. The Controller receives the input, separates the command from the amount, and determines what action to perform.
+
+The Controller then calls the appropriate method in the Model. The Model checks whether the action is valid and updates the coffee volume. Finally, the Controller sends a message to the View to display the result.
+
+This helped me understand how the MVC pattern separates responsibilities and keeps the code organized.
+
