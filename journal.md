@@ -65,3 +65,17 @@ The Controller then calls the appropriate method in the Model. The Model checks 
 
 This helped me understand how the MVC pattern separates responsibilities and keeps the code organized.
 
+## Phase 4: The Full Cycle (Integration)
+
+### What I Accomplished
+
+In this phase, I improved the CoffeePotController to make the program more user-friendly. I added a method that automatically displays the current coffee volume after brewing or pouring. I also improved error handling so invalid commands and non-numeric inputs do not crash the program.
+
+I tested the full simulation by checking the status, brewing coffee, attempting to pour too much, pouring a valid amount, and exiting the program.
+
+### Reflection
+
+The hardest part of connecting the three components was making sure each class handled its own responsibility. The Model manages the coffee volume, the View handles user input and output, and the Controller connects everything together.
+
+Separating these responsibilities made error handling easier because the Controller can catch errors from the Model and send helpful messages through the View without mixing the logic between classes.
+

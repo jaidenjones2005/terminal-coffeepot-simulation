@@ -28,8 +28,7 @@ public class CoffeePotController {
             }
 
             if (command.equals("status")) {
-                view.displayMessage("Current volume: "
-                        + model.getCurrentVolume());
+                showStatus();
                 continue;
             }
 
@@ -38,7 +37,7 @@ public class CoffeePotController {
 
                 if (parts.length != 2) {
                     view.displayMessage(
-                            "Please enter a valid amount.");
+                            "Error: Enter a command and amount.");
                     continue;
                 }
 
@@ -48,16 +47,21 @@ public class CoffeePotController {
                     if (command.equals("brew")) {
                         model.brew(amount);
                         view.displayMessage(
-                                "Brewed " + amount + " units.");
+                                "Successfully brewed "
+                                        + amount + " units.");
                     } else {
                         model.pour(amount);
                         view.displayMessage(
-                                "Poured " + amount + " units.");
+                                "Successfully poured "
+                                        + amount + " units.");
                     }
+
+                    // Automatically display updated volume
+                    showStatus();
 
                 } catch (NumberFormatException e) {
                     view.displayMessage(
-                            "Error: Please enter a number.");
+                            "Error: Amount must be a valid number.");
 
                 } catch (IllegalArgumentException |
                          IllegalStateException e) {
@@ -67,8 +71,14 @@ public class CoffeePotController {
 
             } else {
                 view.displayMessage(
-                        "Unknown command. Please try again.");
+                        "Error: Unknown command. Try again.");
             }
         }
+    }
+
+    private void showStatus() {
+        view.displayMessage(
+                "Current coffee volume: "
+                        + model.getCurrentVolume() + " units.");
     }
 }
