@@ -79,3 +79,26 @@ The hardest part of connecting the three components was making sure each class h
 
 Separating these responsibilities made error handling easier because the Controller can catch errors from the Model and send helpful messages through the View without mixing the logic between classes.
 
+## Phase 5: Validation & Reflection
+
+### What I Accomplished
+
+In this phase, I performed manual testing on my Terminal CoffeePot Simulation to make sure everything worked correctly. I tested brewing coffee to the maximum capacity, pouring the exact amount remaining, entering invalid commands, and attempting actions that should cause errors.
+
+### Testing Results
+
+- Brewing exactly 20 units fills the pot to its maximum capacity.
+- Attempting to brew beyond the maximum capacity displays an error.
+- Pouring exactly the remaining amount empties the pot.
+- Attempting to pour from an empty pot displays an error.
+- Entering random text displays an unknown command message.
+- Entering letters instead of numbers displays an error.
+- Negative amounts are rejected.
+
+### Reflection
+
+The biggest challenge was making sure invalid inputs did not crash the program. Separating the Model, View, and Controller helped because each class had a specific responsibility.
+
+I used ChatGPT as an AI tutor to help review the code structure and understand how the MVC components work together. The suggestions focused on keeping validation in the Model, handling commands in the Controller, and displaying messages through the View.
+
+I kept this structure because it follows the MVC pattern and makes the code easier to understand and maintain.
