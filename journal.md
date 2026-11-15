@@ -38,3 +38,15 @@ I also tested the Model in Main.java to verify that the volume changes correctly
 ### Reflection
 
 I learned that the Model is responsible for managing the application's data and protecting its internal state. It is important for the Model to validate its own data because it prevents invalid operations, even if another part of the program sends incorrect information. This makes the application more reliable and easier to maintain.
+
+## Phase 2: The Terminal Interface (The View)
+
+### What I Accomplished
+
+In this phase, I created the CoffeePotView class to handle the terminal interface. I added methods to display the menu, read user input using Scanner, and display messages.
+
+I also updated Main.java to test the View by allowing users to enter commands and see them printed back in the terminal.
+
+### Reflection
+
+Keeping the input and output logic in a separate View class makes the program easier to organize and maintain. The View only handles what the user sees and types, while the Model handles the coffee pot's data. This separation will make it easier to add the Controller without mixing responsibilities between classes.
